@@ -1,0 +1,61 @@
+div.area-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2.area-title {
+  margin: 30px 0;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 
+    1px 1px rgb(106, 105, 105),
+    2px 2px rgb(106, 105, 105),
+    3px 3px rgb(106, 105, 105),
+    4px 4px rgb(91, 90, 90),
+    5px 5px rgb(77, 76, 76);
+}
+
+div.area-entries {
+  max-width: 70%;
+  height: 100%;
+  padding: 30px 50px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+  column-gap: 60px;
+  row-gap: 30px;
+  border-radius: 10px;
+  border: 2px solid rgb(116, 115, 115);
+  background-color: var(--strong-violet);
+}
+
+div.area-item-container {
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: 1px solid rgb(135, 130, 137);
+  border-radius: 15px;
+  box-shadow: 0px 8px rgb(135, 130, 137);
+  transform: scale(1);
+  transition: transform .3s ease;
+}
+
+div.area-item-container:hover {
+  transform: scale(1.05);
+}
+
+p.area-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 80px;
+  color: var(--strong-violet);
+}
+
+img.area-icon {
+  height: 60px;
+  width: 60px;
+  margin-right: 80px;
+}

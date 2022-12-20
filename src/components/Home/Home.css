@@ -1,0 +1,157 @@
+.home-container {
+  height: calc(100% - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.welcome-container {
+  width: 600px;
+  text-shadow: 
+    1px 1px var(--light-gray),
+    2px 2px var(--light-gray),
+    3px 3px var(--light-gray),
+    4px 4px var(--light-gray),
+    5px 5px var(--light-gray),
+    6px 6px var(--light-gray),
+    7px 7px var(--light-gray),
+    8px 8px var(--light-gray),
+    9px 9px var(--light-gray),
+    10px 10px var(--light-gray);
+  animation: x 4s ease infinite;
+}
+
+@keyframes x {
+  20% {
+    text-shadow:
+        1px 1px var(--light-gray),
+        2px 2px var(--light-gray),
+        3px 3px var(--light-gray),
+        4px 4px var(--light-gray),
+        5px 5px var(--light-gray),
+        6px 6px var(--light-gray),
+        7px 7px var(--light-gray),
+        8px 8px var(--light-gray),
+        9px 9px var(--light-gray),
+        10px 10px var(--light-gray),
+        0px 0px 5px white;
+  }
+
+    40% {
+      text-shadow:
+        1px 1px var(--light-gray),
+        2px 2px var(--light-gray),
+        3px 3px var(--light-gray),
+        4px 4px var(--light-gray),
+        5px 5px var(--light-gray),
+        6px 6px var(--light-gray),
+        7px 7px var(--light-gray),
+        8px 8px var(--light-gray),
+        9px 9px var(--light-gray),
+        10px 10px var(--light-gray);
+    }
+
+    50% {
+      text-shadow:
+        1px 1px var(--light-gray),
+        2px 2px var(--light-gray),
+        3px 3px var(--light-gray),
+        4px 4px var(--light-gray),
+        5px 5px var(--light-gray),
+        6px 6px var(--light-gray),
+        7px 7px var(--light-gray),
+        8px 8px var(--light-gray),
+        9px 9px var(--light-gray),
+        10px 10px var(--light-gray),
+        0px 0px 7px white;
+    }
+
+    60% {
+      text-shadow:
+        1px 1px var(--light-gray),
+        2px 2px var(--light-gray),
+        3px 3px var(--light-gray),
+        4px 4px var(--light-gray),
+        5px 5px var(--light-gray),
+        6px 6px var(--light-gray),
+        7px 7px var(--light-gray),
+        8px 8px var(--light-gray),
+        9px 9px var(--light-gray),
+        10px 10px var(--light-gray);
+    }
+
+    80% {
+      text-shadow:
+        1px 1px var(--light-gray),
+        2px 2px var(--light-gray),
+        3px 3px var(--light-gray),
+        4px 4px var(--light-gray),
+        5px 5px var(--light-gray),
+        6px 6px var(--light-gray),
+        7px 7px var(--light-gray),
+        8px 8px var(--light-gray),
+        9px 9px var(--light-gray),
+        10px 10px var(--light-gray),
+        0px 0px 12px var(--light-violet);
+    }
+
+  100% {
+    text-shadow:
+        1px 1px var(--light-gray),
+        2px 2px var(--light-gray),
+        3px 3px var(--light-gray),
+        4px 4px var(--light-gray),
+        5px 5px var(--light-gray),
+        6px 6px var(--light-gray),
+        7px 7px var(--light-gray),
+        8px 8px var(--light-gray),
+        9px 9px var(--light-gray),
+        10px 10px var(--light-gray);
+  }
+}
+
+h1.welcome {
+  font-size: 6.5rem;
+  letter-spacing: 4px;
+}
+
+.welcome-span {
+  color: var(--light-violet);
+}
+
+.welcome-part1 {
+  opacity: 0;
+  transform: translateX(-300px);
+  animation: welcome-apparition1 .7s ease-out forwards;
+}
+
+.welcome-part2 {
+  opacity: 0;
+  transform: translateX(400px);
+  animation: welcome-apparition2 .7s ease-out forwards;
+}
+
+@keyframes welcome-apparition1 {
+  80% { transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes welcome-apparition2 {
+  80% { transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.laptop-image {
+  height: 400px;
+  transform: scale(0);
+  animation: image-laptop-apparition .7s ease forwards, hola 5s ease infinite .8s;
+}
+
+@keyframes image-laptop-apparition {
+  100% { transform: scale(1.1); }
+}
+
+@keyframes hola {
+  0% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+}

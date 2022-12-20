@@ -1,0 +1,12 @@
+a.link {
+  margin-left: 15px;
+}
+
+a.link svg {
+  fill: white;
+  font-size: 2.5rem;
+}
+
+a.link svg:hover {
+  fill: var(--light-violet);
+}
