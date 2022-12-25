@@ -13,3 +13,15 @@
   min-height: 100vh;
   display: flex;
 }
+
+.download-cv {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  bottom: 15px;
+  right: 15px;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: var(--gray);
+}
