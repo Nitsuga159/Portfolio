@@ -1,4 +1,11 @@
 .skill-container {
   padding-bottom: 50px;
   width: 100%;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: appear-skill .5s ease forwards;
+}
+
+@keyframes appear-skill {
+  100% { transform: translateY(0); opacity: 1; }
 }

@@ -1,0 +1,35 @@
+.who-i-am-container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  justify-content: center;
+  align-self: center;
+  height: calc(100% - 64px);
+}
+
+.who-i-am-sub-containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.who-i-am-description-container {
+  width: 80%;
+  padding: 10px;
+  background-color: var(--gray);
+}
+
+h2.who-i-am-title {
+  font-size: 2rem;
+  color: var(--shine-violet);
+}
+
+p.who-i-am-description {
+  color: white;
+}
+
+.perfil-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}

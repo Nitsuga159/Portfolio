@@ -1,0 +1,98 @@
+form.form-contact {
+  width: 80%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+h3.title-form {
+  width: 80%;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin: 30px auto 10px;
+  color: var(--light-violet);
+  text-shadow:
+      1px 1px var(--violet),
+      2px 2px var(--violet),
+      3px 3px var(--violet),
+      4px 4px var(--violet),
+      5px 5px var(--violet);
+}
+
+p.description-form {
+  width: 80%;
+  font-size: 1.1rem;
+  color: var(--shine-violet);
+  margin: 0 auto;
+}
+
+div.input-container, textarea.textarea {
+  margin: 20px 0;
+}
+
+div.input-container label {
+  color: white;
+}
+
+div.css-1a1fmpi-MuiInputBase-root-MuiInput-root:before {
+  border-bottom: 1px solid white;
+  left: 0;
+  bottom: 0;
+  content: "\00a0";
+  position: absolute;
+  right: 0;
+  -webkit-transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  pointer-events: none;
+}
+
+div.css-1a1fmpi-MuiInputBase-root-MuiInput-root:hover {
+  border-bottom: 0px;
+}
+
+textarea.textarea {
+  width: calc(100% - 20px);
+  color: white;
+  font-size: 1rem;
+  background-color: var(--gray);
+  border-radius: 6px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+textarea.textarea:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+button.submit-button {
+  width: 100%;
+  font-size: 1.1rem;
+  background-color: var(--violet);
+}
+
+button.submit-button:hover {
+  background-color: var(--light-violet);
+}
+
+h5.form-propuesta {
+  font-size: 1rem;
+}
+
+@media (max-width: 450px) {
+  h3.title-form {
+    font-size: 1.8rem;
+  }
+
+  p.description-form {
+      width: 80%;
+      font-size: 1rem;
+  }
+
+  button.submit-button {
+      font-size: .9rem;
+  }
+}

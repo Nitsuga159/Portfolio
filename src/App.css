@@ -1,8 +1,12 @@
 :root {
   --light-violet: #ad74d3;
+  --light-violet-opacity: #241131db;
   --violet: #52296a;
+  --gray: #252525;
   --light-gray: #2f2937;
   --strong-violet: #19141a;
+  --shine-gray: #7a797d;
+  --shine-violet: #dcbfef;
 }
 
 .App {

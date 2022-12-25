@@ -3,10 +3,12 @@ div.area-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 h2.area-title {
   margin: 30px 0;
+  text-align: center;
   color: white;
   letter-spacing: 2px;
   text-shadow: 
@@ -40,7 +42,7 @@ div.area-item-container {
   border-radius: 15px;
   box-shadow: 0px 8px rgb(135, 130, 137);
   transform: scale(1);
-  transition: transform .3s ease;
+  transition: all .3s ease;
 }
 
 div.area-item-container:hover {
@@ -58,4 +60,73 @@ img.area-icon {
   height: 60px;
   width: 60px;
   margin-right: 80px;
+}
+
+@media (max-width: 1700px) {
+  div.area-entries {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  }
+
+  p.area-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-left: 50px;
+      margin-right: 50px;
+      color: var(--strong-violet);
+  }
+
+    img.area-icon {
+      height: 50px;
+      width: 50px;
+      margin-right: 50px;
+    }
+}
+
+@media (max-width: 1050px) {
+  h2.area-title {
+    font-size: 2.5rem;
+  }
+
+  div.area-entries {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    }
+  
+    p.area-name {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-left: 50px;
+      margin-right: 30px;
+      color: var(--strong-violet);
+    }
+  
+    img.area-icon {
+      height: 50px;
+      width: 50px;
+      margin-right: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+  h2.area-title {
+      font-size: 1.8rem;
+  }
+
+  div.area-entries {
+      grid-template-columns: repeat(auto-fit, 180px);
+      padding: 30px 20px;
+    }
+  
+    p.area-name {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-left: 15px;
+      margin-right: 30px;
+      color: var(--strong-violet);
+    }
+  
+    img.area-icon {
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+    }
 }

@@ -1,12 +1,14 @@
 .home-container {
   height: calc(100% - 64px);
-  display: flex;
+  display: grid;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
+  grid-template-columns: 1fr 1fr;
+  overflow-x: hidden;
 }
 
 .welcome-container {
-  width: 600px;
+  margin: 0 auto;
   text-shadow: 
     1px 1px var(--light-gray),
     2px 2px var(--light-gray),
@@ -111,6 +113,8 @@
 }
 
 h1.welcome {
+  width: 70%;
+  margin: 0 auto;
   font-size: 6.5rem;
   letter-spacing: 4px;
 }
@@ -142,7 +146,8 @@ h1.welcome {
 }
 
 .laptop-image {
-  height: 400px;
+  width: 30vw;
+  margin: 0 auto;
   transform: scale(0);
   animation: image-laptop-apparition .7s ease forwards, hola 5s ease infinite .8s;
 }
@@ -154,4 +159,49 @@ h1.welcome {
 @keyframes hola {
   0% { transform: scale(1.1); }
   50% { transform: scale(1); }
+}
+
+@media (max-width: 1300px) {
+  h1.welcome {
+    font-size: 5rem;
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 1100px) {
+  h1.welcome {
+    font-size: 3.9rem;
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-container {
+      height: calc(100% - 64px);
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .home-container * {
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .welcome-container {
+    width: 70%;
+  }
+
+  h1.welcome {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    min-height: auto;
+    word-break:normal;
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+  }
 }

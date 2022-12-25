@@ -16,6 +16,9 @@ import WhoIAm from '../WhoIAm/WhoIAm';
 import {GitHub as GitHubIcon, LinkedIn as LinkedInIcon} from '@mui/icons-material';
 import { BLACK, GRAY, LIGHT_GRAY, STRONG_BLACK } from '../helpers/colors';
 import './NavBar.css';
+import Projects from '../Projects/Projects';
+import Contact from '../Contact/Contact';
+import Objectives from '../Objectives/Objectives';
 
 const drawerWidth: number = 240;
 
@@ -24,7 +27,7 @@ interface AppBarProps extends MuiAppBarProps {
 }
 
 const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
+  shouldForwardProp: (prop: string) => prop !== 'open',
 })<AppBarProps>(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
   transition: theme.transitions.create(['width', 'margin'], {
@@ -41,7 +44,7 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
+const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop: string) => prop !== 'open' })(
   ({ theme, open }) => ({
     '& .MuiDrawer-paper': {
       position: 'relative',
@@ -106,6 +109,7 @@ function DashboardContent() {
               color="inherit"
               noWrap
               sx={{ flexGrow: 1 }}
+              className='by-nitsuga'
             >
               By Nitsuga
             </Typography>
@@ -150,6 +154,12 @@ function DashboardContent() {
                       ? <WhoIAm />
                       : main === 'skills'
                       ? <Skills />
+                      : main === 'projects'
+                      ? <Projects />
+                      : main === 'contact'
+                      ? <Contact />
+                      : main === 'objectives'
+                      ? <Objectives />
                       : <></>
                   }
         </Box>

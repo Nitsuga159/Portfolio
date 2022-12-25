@@ -10,3 +10,14 @@ a.link svg {
 a.link svg:hover {
   fill: var(--light-violet);
 }
+
+
+@media (max-width: 340px) {
+  h1.by-nitsuga {
+    font-size: 1rem;
+  }
+
+  a.link svg {
+    font-size: 1.7rem;
+  }
+}
