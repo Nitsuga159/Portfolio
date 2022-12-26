@@ -30,11 +30,12 @@ div.input-container, textarea.textarea {
   margin: 20px 0;
 }
 
-.form-contact div.input-container label {
+div.input-container label {
   color: white;
 }
 
-.form-contact div.css-1a1fmpi-MuiInputBase-root-MuiInput-root:before {
+div.css-1a1fmpi-MuiInputBase-root-MuiInput-root:before,
+div.css-1yf1g2m::before {
   border-bottom: 1px solid white;
   left: 0;
   bottom: 0;
@@ -46,7 +47,8 @@ div.input-container, textarea.textarea {
   pointer-events: none;
 }
 
-.form-contact div.css-1a1fmpi-MuiInputBase-root-MuiInput-root:after {
+div.css-1a1fmpi-MuiInputBase-root-MuiInput-root:after,
+div.css-1yf1g2m::after {
   border-bottom: 1px solid var(--light-violet);
 }
 
@@ -54,7 +56,8 @@ div.input-container, textarea.textarea {
   color: var(--light-violet);
 }
 
-.form-contact div.css-1a1fmpi-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before {
+div.css-1a1fmpi-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before,
+div.css-1yf1g2m:hover:not(.Mui-disabled)::before {
   border-bottom: 1px solid rgba(255, 255, 255, 0.452);
 }
 
