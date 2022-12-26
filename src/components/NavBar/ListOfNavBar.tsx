@@ -47,7 +47,7 @@ export default function ListOfNavBar({ setMain, main }: Props){
             listItems.map((ele, i) => (
               <ListItemButton 
                 onClick={() => {
-                    window.scrollTo(0, 0);
+                    (document.querySelector('main') as HTMLElement).scrollTop = 0
                     handleSetMain(ele.value)
                   }
                 } 

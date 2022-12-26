@@ -41,7 +41,7 @@ export default function Card({ title, imgURL, href, description }: CardType) {
       onMouseOver={!isMobile ? () => setContentActive(true) : undefined} 
       className='card-container'
     >
-      <a onClick={isMobile ? (e) => e.preventDefault() : undefined} href={href} target='_blank' rel='noopener'>
+      <a onClick={isMobile ? (e) => e.preventDefault() : undefined} href={href} target='_blank' rel='noreferrer'>
         <img className='card-image' src={imgURL} alt={title} /> 
         <Box className={`card-content ${contentActive ? 'card-content-active' : ''}`.trim()}>
           <Typography className='card-title' fontWeight='bolder' variant='h4'>{title}</Typography>
