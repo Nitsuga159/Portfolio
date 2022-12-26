@@ -3,6 +3,7 @@
   --light-violet-opacity: #241131db;
   --violet: #52296a;
   --gray: #252525;
+  --black: #0d0d0d;
   --light-gray: #2f2937;
   --strong-violet: #19141a;
   --shine-gray: #7a797d;
@@ -12,16 +13,4 @@
 .App {
   min-height: 100vh;
   display: flex;
-}
-
-.download-cv {
-  position: fixed;
-  width: 150px;
-  height: 150px;
-  bottom: 15px;
-  right: 15px;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  background-color: var(--gray);
 }

@@ -13,12 +13,11 @@ import ListItems from './ListOfNavBar';
 import Home from '../Home/Home';
 import Skills from "../Skills/Skills"
 import WhoIAm from '../WhoIAm/WhoIAm';
+import Projects from '../Projects/Projects';
+import Contact from '../Contact/Contact';
 import {GitHub as GitHubIcon, LinkedIn as LinkedInIcon} from '@mui/icons-material';
 import { BLACK, GRAY, LIGHT_GRAY, STRONG_BLACK } from '../helpers/colors';
 import './NavBar.css';
-import Projects from '../Projects/Projects';
-import Contact from '../Contact/Contact';
-import Objectives from '../Objectives/Objectives';
 
 const drawerWidth: number = 240;
 
@@ -158,8 +157,6 @@ function DashboardContent() {
                       ? <Projects />
                       : main === 'contact'
                       ? <Contact />
-                      : main === 'objectives'
-                      ? <Objectives />
                       : <></>
                   }
         </Box>

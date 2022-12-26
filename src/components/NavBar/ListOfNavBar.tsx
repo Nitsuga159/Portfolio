@@ -8,7 +8,6 @@ import {
   Home as HomeIcon,
   Code as CodeIcon,
   Folder as FolderIcon,
-  ContentPasteSearch as ContentPasteSearchIcon,
   ContactMail as ContactMailIcon
 } from '@mui/icons-material';
 import { LIGHT_BLACK } from '../helpers/colors';
@@ -33,9 +32,6 @@ export default function ListOfNavBar({ setMain, main }: Props){
     },
     {
       text: 'Proyectos', icon: <FolderIcon sx={{fill: 'white' }} />, value: 'projects'
-    },
-    {
-      text: 'Objetivos', icon: <ContentPasteSearchIcon sx={{fill: 'white' }} />, value: 'objectives'
     },
     {
       text: 'Contáctame', icon: <ContactMailIcon sx={{fill: 'white' }} />, value: 'contact'
