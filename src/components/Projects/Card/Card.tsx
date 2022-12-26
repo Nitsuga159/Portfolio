@@ -49,7 +49,7 @@ export default function Card({ title, imgURL, href, description }: CardType) {
             {description}
             {isMobile && 
             <LinkIcon 
-              sx={{verticalAlign: 'middle', marginLeft: '10px', fill: '#cca5e6', fontSize: '1.2rem'}} 
+              sx={{verticalAlign: 'middle', marginLeft: '10px', fill: '#cca5e6', fontSize: '1.7rem'}} 
               onClick={() => window.open(href, '_blank')} 
             />
           }
@@ -58,7 +58,7 @@ export default function Card({ title, imgURL, href, description }: CardType) {
         {isMobile && 
           <KeyboardArrowUpIcon 
             className='arrow-up' 
-            sx={{fill: 'white', zIndex: 99}} 
+            sx={{fill: 'white', zIndex: 99}}
             onClick={handleClick}
           />
         }

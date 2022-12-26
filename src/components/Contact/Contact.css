@@ -52,7 +52,8 @@ div.css-1yf1g2m::after {
   border-bottom: 1px solid var(--light-violet);
 }
 
-.form-contact label.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+label.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused,
+label.css-348fk2.Mui-focused {
   color: var(--light-violet);
 }
 
