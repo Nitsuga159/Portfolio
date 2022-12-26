@@ -40,10 +40,11 @@ p.who-i-am-description {
 
 .perfil-image {
   width: 300px;
-  height: 300px;
+  height: auto;
   border-radius: 50%;
   transform: scale(0);
   opacity: 0;
+  border: 2px solid var(--violet);
   animation: who-i-am-image-apparition .5s ease-out forwards;
 }
 
@@ -75,7 +76,7 @@ p.who-i-am-description {
 
   .perfil-image {
     width: 150px;
-    height: 150px;
+    height: auto;
     margin-top: 20px;
   }
 
@@ -87,5 +88,9 @@ p.who-i-am-description {
   p.who-i-am-description {
     font-size: .9rem;
     margin: 5px 0;
+  }
+
+  div.who-i-am-description-container {
+    margin-bottom: 50px;
   }
 }

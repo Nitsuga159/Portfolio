@@ -46,8 +46,16 @@ div.css-1a1fmpi-MuiInputBase-root-MuiInput-root:before {
   pointer-events: none;
 }
 
-div.css-1a1fmpi-MuiInputBase-root-MuiInput-root:hover {
-  border-bottom: 0px;
+div.css-1a1fmpi-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: 1px solid var(--light-violet);
+}
+
+label.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: var(--light-violet);
+}
+
+div.css-1a1fmpi-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.452);
 }
 
 textarea.textarea {
@@ -94,5 +102,11 @@ h5.form-propuesta {
 
   button.submit-button {
       font-size: .9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  form.form-contact {
+    margin-bottom: 100px;
   }
 }

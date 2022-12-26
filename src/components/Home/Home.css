@@ -20,10 +20,10 @@
     8px 8px var(--light-gray),
     9px 9px var(--light-gray),
     10px 10px var(--light-gray);
-  animation: x 4s ease infinite;
+  animation: welcome-apparition 4s ease infinite;
 }
 
-@keyframes x {
+@keyframes welcome-apparition {
   20% {
     text-shadow:
         1px 1px var(--light-gray),
@@ -149,14 +149,14 @@ h1.welcome {
   width: 30vw;
   margin: 0 auto;
   transform: scale(0);
-  animation: image-laptop-apparition .7s ease forwards, hola 5s ease infinite .8s;
+  animation: image-laptop-apparition .7s ease forwards, image-scale 5s ease infinite .8s;
 }
 
 @keyframes image-laptop-apparition {
   100% { transform: scale(1.1); }
 }
 
-@keyframes hola {
+@keyframes image-scale {
   0% { transform: scale(1.1); }
   50% { transform: scale(1); }
 }
@@ -197,11 +197,74 @@ h1.welcome {
 
   h1.welcome {
     width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    min-height: auto;
-    word-break:normal;
-    font-size: 1.8rem;
+    margin: 0;
+    text-align: left;
+    font-size: 1.9rem;
     letter-spacing: 4px;
+    text-shadow:
+        1px 1px var(--light-gray),
+        2px 2px var(--light-gray),
+        3px 3px var(--light-gray),
+        4px 4px var(--light-gray),
+        5px 5px var(--light-gray);
   }
+
+    @keyframes welcome-apparition {
+      20% {
+        text-shadow:
+          1px 1px var(--light-gray),
+          2px 2px var(--light-gray),
+          3px 3px var(--light-gray),
+          4px 4px var(--light-gray),
+          5px 5px var(--light-gray),
+          0px 0px 5px white;
+      }
+  
+      40% {
+        text-shadow:
+          1px 1px var(--light-gray),
+          2px 2px var(--light-gray),
+          3px 3px var(--light-gray),
+          4px 4px var(--light-gray),
+          5px 5px var(--light-gray);
+      }
+  
+      50% {
+        text-shadow:
+          1px 1px var(--light-gray),
+          2px 2px var(--light-gray),
+          3px 3px var(--light-gray),
+          4px 4px var(--light-gray),
+          5px 5px var(--light-gray),
+          0px 0px 7px white;
+      }
+  
+      60% {
+        text-shadow:
+          1px 1px var(--light-gray),
+          2px 2px var(--light-gray),
+          3px 3px var(--light-gray),
+          4px 4px var(--light-gray),
+          5px 5px var(--light-gray);
+      }
+  
+      80% {
+        text-shadow:
+          1px 1px var(--light-gray),
+          2px 2px var(--light-gray),
+          3px 3px var(--light-gray),
+          4px 4px var(--light-gray),
+          5px 5px var(--light-gray),
+          0px 0px 12px var(--light-violet);
+      }
+  
+      100% {
+        text-shadow:
+          1px 1px var(--light-gray),
+          2px 2px var(--light-gray),
+          3px 3px var(--light-gray),
+          4px 4px var(--light-gray),
+          5px 5px var(--light-gray);
+      }
+    }
 }

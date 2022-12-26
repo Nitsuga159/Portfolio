@@ -63,3 +63,9 @@ p.description-projects {
       grid-template-columns: repeat(auto-fit, 180px);
   }
 }
+
+@media (max-width: 600px) {
+  .cards-container:last-child {
+    margin-bottom: 100px;
+  }
+}

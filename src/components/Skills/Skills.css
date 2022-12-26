@@ -9,3 +9,9 @@
 @keyframes appear-skill {
   100% { transform: translateY(0); opacity: 1; }
 }
+
+@media (max-width: 600px) {
+  .skill-container {
+    margin-bottom: 50px;
+  }
+}

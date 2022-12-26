@@ -61,9 +61,29 @@ p.card-description {
   padding-bottom: 25px;
 }
 
+a.link-go {
+  color: var(--light-violet);
+}
+
+.arrow-up {
+  position: absolute;
+  font-size: 1rem;
+  bottom: 5px;
+  right: 5px;
+}
+
 @media (max-width: 500px) {
   img.card-image, div.card-container {
       width: 180px;
       height: 180px;
   }
+
+    h4.card-title {
+      font-size: 1.3rem;
+      padding-bottom: 5px;
+    }
+
+    p.card-description {
+      font-size: .9rem;
+    }
 }

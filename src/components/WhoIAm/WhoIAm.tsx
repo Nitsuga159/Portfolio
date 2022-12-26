@@ -47,7 +47,7 @@ export default function WhoIAm() {
         <img
           alt='perfil-image'
           className="perfil-image"
-          src='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d4ad40103067131.5f450dd53ccd1.png' 
+          src={require('../../images/perfil-image.jpg')}
         />
       </Box>
     </Box>
