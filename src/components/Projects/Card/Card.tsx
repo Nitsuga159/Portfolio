@@ -49,7 +49,7 @@ export default function Card({ title, imgURL, href, description }: CardType) {
             {description}
             {isMobile && 
             <LinkIcon 
-              sx={{verticalAlign: 'middle', marginLeft: '10px', fill: '#cca5e6'}} 
+              sx={{verticalAlign: 'middle', marginLeft: '10px', fill: '#cca5e6', fontSize: '1.2rem'}} 
               onClick={() => window.open(href, '_blank')} 
             />
           }

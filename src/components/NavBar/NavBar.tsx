@@ -72,13 +72,12 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop: string) => prop !==
 const mdTheme = createTheme();
 
 function DashboardContent() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(window.innerWidth > 600);
   const toggleDrawer = () => {
     setOpen(!open);
   };
 
   const [main, setMain] = useState('home');
-  
 
   return (
     <ThemeProvider theme={mdTheme}>
