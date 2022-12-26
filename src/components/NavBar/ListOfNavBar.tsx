@@ -46,7 +46,11 @@ export default function ListOfNavBar({ setMain, main }: Props){
           {
             listItems.map((ele, i) => (
               <ListItemButton 
-                onClick={() => handleSetMain(ele.value)} 
+                onClick={() => {
+                    window.scrollTo(0, 0);
+                    handleSetMain(ele.value)
+                  }
+                } 
                 key={i}
                 className={`list-item ${ele.value === main ? 'list-item-active' : ''}`.trim()}
               >
