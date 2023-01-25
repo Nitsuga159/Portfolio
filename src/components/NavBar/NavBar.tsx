@@ -15,7 +15,7 @@ import Skills from "../Skills/Skills"
 import WhoIAm from '../WhoIAm/WhoIAm';
 import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
-import {GitHub as GitHubIcon, LinkedIn as LinkedInIcon} from '@mui/icons-material';
+import { GitHub as GitHubIcon, LinkedIn as LinkedInIcon } from '@mui/icons-material';
 import { BLACK, GRAY, LIGHT_GRAY, STRONG_BLACK } from '../helpers/colors';
 import './NavBar.css';
 
@@ -81,7 +81,7 @@ function DashboardContent() {
 
   return (
     <ThemeProvider theme={mdTheme}>
-      <Box component= "div" sx={{ display: 'flex', width: '100%'}}>
+      <Box component="div" sx={{ display: 'flex', width: '100%' }}>
         <AppBar position="fixed" open={open}>
           <Toolbar
             sx={{
@@ -114,7 +114,7 @@ function DashboardContent() {
             <a className='link' href='https://www.linkedin.com/in/agust%C3%ADn-romero-33919b24b/' target='_blank' rel='noreferrer'>
               <LinkedInIcon fontSize='large' />
             </a>
-            <a  className='link' href='https://github.com/Nitsuga159?tab=repositories' target='_blank' rel='noreferrer'>
+            <a className='link' href='https://github.com/Nitsuga159?tab=repositories' target='_blank' rel='noreferrer'>
               <GitHubIcon fontSize='large' />
             </a>
           </Toolbar>
@@ -129,11 +129,11 @@ function DashboardContent() {
             }}
           >
             <IconButton onClick={toggleDrawer}>
-              <ChevronLeftIcon sx={{fill: 'white'}} />
+              <ChevronLeftIcon sx={{ fill: 'white' }} />
             </IconButton>
           </Toolbar>
-          <Divider sx={{bgcolor: STRONG_BLACK}} />
-            <ListItems setMain={setMain} main={main}  />
+          <Divider sx={{ bgcolor: STRONG_BLACK }} />
+          <ListItems setMain={setMain} main={main} />
         </Drawer>
         <Box
           component="main"
@@ -145,19 +145,19 @@ function DashboardContent() {
           }}
         >
           <Toolbar />
-                  {
-                    main === 'home'
-                      ? <Home />
-                      : main === 'whoiam'
-                      ? <WhoIAm />
-                      : main === 'skills'
-                      ? <Skills />
-                      : main === 'projects'
-                      ? <Projects />
-                      : main === 'contact'
+          {
+            main === 'home'
+              ? <Home />
+              : main === 'whoiam'
+                ? <WhoIAm />
+                : main === 'skills'
+                  ? <Skills />
+                  : main === 'projects'
+                    ? <Projects />
+                    : main === 'contact'
                       ? <Contact />
                       : <></>
-                  }
+          }
         </Box>
       </Box>
     </ThemeProvider>
