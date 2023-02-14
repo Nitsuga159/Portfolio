@@ -1,10 +1,7 @@
-import * as React from 'react';
-import { Box } from "@mui/material";
-import { useEffect, useState } from "react";
 import './Skills.css';
 import Area from './Area/Area';
 
-export default function Skills() {
+export default function Skills({ scrollTechnologies }: { scrollTechnologies: boolean }) {
 
   const lenguagues = [
     {
@@ -29,8 +26,11 @@ export default function Skills() {
       name: 'MySQL', icon: require('../../images/mysql-logo.svg').default
     },
     {
+      name: 'Java', icon: require('../../images/java-logo.svg').default
+    },
+    {
       name: 'C', icon: require('../../images/c-logo.svg').default
-    },  
+    },
   ];
 
   const frameworks = [
@@ -39,21 +39,27 @@ export default function Skills() {
     },
     {
       name: 'Redux', icon: require('../../images/redux-logo.svg').default
-    }, 
+    },
     {
       name: 'Express', icon: require('../../images/express-logo.svg').default
-    }, 
+    },
     {
       name: 'Sequelize', icon: require('../../images/sequelize-logo.svg').default
-    }, 
+    },
+    {
+      name: 'NestJS', icon: require('../../images/nestjs-logo.svg').default
+    },
+    {
+      name: 'Angular', icon: require('../../images/angular-logo.svg').default
+    },
     {
       name: 'MaterialUI', icon: require('../../images/materialui-logo.svg').default
-    },  
+    },
   ];
 
   const others = [
     {
-      name: 'GitHub', icon: require('../../images/github-logo.svg').default
+      name: 'GitHub', icon: require('../../images/github-logo-black.svg').default
     },
     {
       name: 'Git', icon: require('../../images/git-logo.svg').default
@@ -66,29 +72,11 @@ export default function Skills() {
     },
   ];
 
-  const basic = [
-    {
-      name: 'NestJS', icon: require('../../images/nestjs-logo.svg').default
-    },
-    {
-      name: 'Java', icon: require('../../images/java-logo.svg').default
-    },
-    {
-      name: 'Python', icon: require('../../images/python-logo.svg').default
-    },
-    {
-      name: 'PHP', icon: require('../../images/php-logo.svg').default
-    },
-  ];
-
   return (
-    <>
-        <Box className='skill-container'>
-            <Area title='Lenguajes' entries={lenguagues} />
-            <Area title='Frameworks' entries={frameworks} />
-            <Area title='Herramientas' entries={others} />
-            <Area title='Conocimiento Básico' entries={basic} />
-        </Box>
-    </>
+    <div id="technologies" className='skill-container'>
+      <Area title='Lenguajes' entries={lenguagues} scrollTechnologies={scrollTechnologies} />
+      <Area title='Frameworks' entries={frameworks} scrollTechnologies={scrollTechnologies} />
+      <Area title='Herramientas' entries={others} scrollTechnologies={scrollTechnologies} />
+    </div>
   );
 }

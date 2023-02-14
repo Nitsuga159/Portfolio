@@ -1,0 +1,133 @@
+.global-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background-color: var(--black-transparent);
+  z-index: 100;
+}
+
+.container-detail-project {
+  position: relative;
+  width: 90%;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(90deg, var(--gray), var(--strong-black));
+  border-radius: 7px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.71), 3px 3px var(--strong-orange),
+    -2px -2px var(--orange), -2px 2px var(--orange), 2px -2px var(--orange);
+  transform: scale(0);
+  animation: appear-detail-project 0.5s ease forwards;
+  padding: 2%;
+  padding-bottom: 3rem;
+}
+
+@keyframes appear-detail-project {
+  to {
+    transform: scale(1);
+  }
+}
+
+.image-detail-project {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: 5px 0 5px var(--strong-black);
+  border-radius: 10px;
+}
+
+.text-detail-project {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.title-detail-project {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: var(--light-orange);
+  text-shadow: 0 0 5px var(--orange);
+}
+
+.description-detail-project {
+  width: 90%;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: var(--white);
+}
+
+.buttons-detail-project {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.link-project,
+.close-button {
+  font-size: 1.2rem;
+  padding: 0.2rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.link-project {
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--strong-green);
+}
+
+.close-button {
+  color: var(--white);
+  background-color: var(--fusia);
+  margin-left: 1rem;
+}
+
+.link-project:hover {
+  background-color: var(--green);
+}
+
+.close-button:hover {
+  background-color: var(--light-fusia);
+}
+
+.text-detail-project::-webkit-scrollbar {
+  width: 2px;
+}
+
+.text-detail-project::-webkit-scrollbar-thumb {
+  background-color: var(--white);
+}
+
+.text-detail-project::-webkit-scrollbar-track {
+  background-color: var(--strong-black);
+}
+
+@media (max-width: 800px) {
+  .container-detail-project {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .image-detail-project {
+    height: 150px;
+  }
+
+  .description-detail-project {
+    font-size: 1rem;
+    overflow-y: auto;
+    height: 250px;
+  }
+
+  .title-detail-project {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+}

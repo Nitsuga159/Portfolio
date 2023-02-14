@@ -1,25 +1,28 @@
-import { Box, Typography, Paper } from "@mui/material";
 import './Area.css'
 
 type Props = {
   title: string,
-  entries: {name: string, icon: string}[]
+  entries: { name: string, icon: string }[],
+  scrollTechnologies: boolean
 };
 
-export default function Area({ title, entries }: Props) {
+export default function Area({ title, entries, scrollTechnologies }: Props) {
   return (
-    <Box className='area-container'>
-      <Typography className='area-title' variant='h2' fontWeight='bolder'>{title}</Typography>
-      <Box className='area-entries'>
+    <div className='area-container'>
+      <h3 className='area-title'>{title}</h3>
+      <div className='area-entries'>
         {
           entries.map((ele, i) => (
-            <Paper elevation={4} className='area-item-container' key={i}>
-              <Typography className='area-name' >{ele.name}</Typography>
+            <div className={`area-item-container ${scrollTechnologies ?
+              i % 2 == 0 ? 'left-area-item' : 'right-area-item'
+              : ""}`
+            } key={i}>
+              <h4 className='area-name' >{ele.name}</h4>
               <img className='area-icon' src={ele.icon} alt={ele.name} draggable={false} />
-            </Paper>
+            </div>
           ))
         }
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 }

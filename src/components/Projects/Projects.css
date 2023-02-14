@@ -1,71 +1,37 @@
 .projects-container {
+  min-height: 100vh;
   width: 100%;
-  transform: translateY(-100px);
-  opacity: 0;
-  animation: appear-projects .7s ease forwards;
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.816) 0%,
+      rgba(8, 3, 1, 0.701) 70%
+    ),
+    url("https://imgs.search.brave.com/HiUqcg8yzyoDn1jBHKmJfHQRxfiT3a1CpdkKaSugBbo/rs:fit:626:421:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vNzM2/eC84Ni8yNC9iZi84/NjI0YmYzODk4Nzdl/NTA1NTA1ZWE5NTE3/MGNkMjQ1Yy5qcGc");
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes appear-projects {
-  100% { transform: translateY(0); opacity: 1; }
+.projects-subcontainer {
+  width: 700px;
+  background-color: var(--strong-black);
+  padding: 1.5rem;
+  border-radius: 8px;
 }
 
-h2.projects-title {
+.projects-title {
+  font-size: 2rem;
   text-align: center;
-  margin: 30px 0;
   color: white;
   letter-spacing: 2px;
-  text-shadow:
-    1px 1px rgb(106, 105, 105),
-    2px 2px rgb(106, 105, 105),
-    3px 3px rgb(106, 105, 105),
-    4px 4px rgb(91, 90, 90),
-    5px 5px rgb(77, 76, 76);
+  cursor: pointer;
+  padding: 1rem 0;
 }
 
-p.description-projects {
-  width: 70%;
-  text-align: center;
-  margin: 20px auto;
-  margin-bottom: 50px;
-  font-size: 1.3rem;
-  color: white
-}
-
-.cards-container {
-  width: calc(100% - 100px);
-  margin: 0 auto;
-  margin-bottom: 100px;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, 300px);
-  column-gap: 45px;
-  row-gap: 30px;
-}
-
-@media (max-width: 500px) {
-  h2.projects-title {
-    font-size: 2rem;
-    padding: 0 30px;
-  }
-  
-  p.description-projects {
-    width: 80%;
-    text-align: center;
-    margin: 10px auto;
-    margin-bottom: 30px;
-    font-size: 1rem;
-  }
-
-  .cards-container {
-      margin: 0 auto;
-      margin-bottom: 50px;
-      justify-content: center;
-      grid-template-columns: repeat(auto-fit, 180px);
-  }
-}
-
-@media (max-width: 600px) {
-  .cards-container:last-child {
-    margin-bottom: 100px;
+@media screen and (max-width: 550px) {
+  .projects-title {
+    font-size: 1.4rem;
   }
 }

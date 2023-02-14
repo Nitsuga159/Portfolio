@@ -1,14 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -17,23 +23,26 @@ code {
   bottom: 20px;
   right: 20px;
   padding: 10px;
-  color: white;
+  color: var(--white);
   font-size: 1.2rem;
   font-weight: bolder;
   text-decoration: none;
   border-radius: 10px;
-  background-color: var(--light-violet);
-  box-shadow: 0 0 10px var(--light-violet);
-  transition: background-color .3s ease;
+  background-color: var(--fusia);
+  box-shadow: 0 0 8px var(--fusia);
+  transition: background-color 0.3s ease;
+  z-index: 98;
 }
 
 .download-cv:hover {
-  background-color: var(--violet);
+  color: var(--white);
+  background-color: var(--shine-gray);
+  box-shadow: none;
 }
 
 @media (max-width: 600px) {
   .download-cv {
-    font-size: .9rem;
+    font-size: 0.9rem;
     padding: 5px;
     bottom: 10px;
     right: 10px;

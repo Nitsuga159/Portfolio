@@ -1,17 +1,9 @@
 .skill-container {
-  padding-bottom: 50px;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
   width: 100%;
-  opacity: 0;
-  transform: translateY(-100px);
-  animation: appear-skill .5s ease forwards;
-}
-
-@keyframes appear-skill {
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-@media (max-width: 600px) {
-  .skill-container {
-    margin-bottom: 50px;
-  }
+  background: linear-gradient(45deg, rgba(3, 5, 3, 0.866), rgba(0, 0, 0, 0.834)),
+    url("../../images/background-technologies.webp");
+  background-attachment: fixed;
+  background-position: center;
 }

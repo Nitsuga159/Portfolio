@@ -1,87 +1,40 @@
-import { Box, TextField, Button, Typography } from "@mui/material"
 import './Contact.css';
+import linkedIin from '../../images/linkedin-logo.svg'
+import gmail from '../../images/gmail-logo.svg'
+import whatsapp from '../../images/whatsapp-logo.svg'
+import github from '../../images/github-logo.svg'
 
-export default function Contact() {
+export default function Contact({ scrollContact }: { scrollContact: boolean }) {
   return (
-    <>
-      <Typography 
-        variant='h3' 
-        className='title-form'
-      >Contáctame
-      </Typography>
-      <Typography 
-        className='description-form'
+    <footer id="contact">
+      <a
+        className={`link-contact-container ${scrollContact ? 'appear-links' : ''}`}
+        href="https://www.linkedin.com/in/agust%C3%ADn-romero-33919b24b/"
+        target="_blank"
+        rel="noopeneer">
+        <img className="link-contact" src={linkedIin} alt="linkedIn" />
+      </a>
+      <a
+        className={`link-contact-container ${scrollContact ? 'appear-links' : ''}`}
+        href="https://mail.google.com/mail/u/0/?fs=1&to=agusromero0815@gmail.com&tf=cm"
+        target="_blank"
       >
-        ¡Contáctame para algún proyecto que tengas y hagámoslo realidad! 🚀🚀
-      </Typography>
-      <form 
-        action='https://formsubmit.co/dd6d334afd9b703b8f21fbabe1b178d0' 
-        method='POST'
-        className='form-contact' 
-      >
-        <TextField 
-          type='text'
-          label='Nombre y Apellido'
-          required
-          fullWidth
-          name='Nombre'
-          variant="standard"
-          inputProps={{
-            style: {color: 'white'}
-          }}
-          className='input-container'
-        />
-        <TextField 
-          type='email'
-          label='Correo'
-          name='Correo'
-          required
-          fullWidth
-          variant="standard"
-          inputProps={{
-            style: {color: 'white'}
-          }}
-          className='input-container'
-        />
-        <TextField 
-          type='text'
-          label='Asunto'
-          name='Asunto'
-          required
-          fullWidth
-          variant="standard"
-          inputProps={{
-            style: {color: 'white'}
-          }}
-          className='input-container'
-        />
-        <Typography variant='h5' sx={{color: 'white', mt: 3}} className='form-propuesta'>Propuesta: </Typography>
-        <textarea
-          placeholder='Escriba aquí...'
-          rows={6}
-          name='Propuesta'
-          className='textarea'
-          required
-        ></textarea>
-        <input 
-          type="hidden" 
-          name='_next' 
-          value={process.env.REACT_APP_HOST || 'http://localhost:3000'} 
-        />
-        <input 
-          type="hidden" 
-          name='_captcha'
-          value='false'
-        />
-        {/* <input type="hidden" name='' /> */}
-        <Button
-          type='submit'
-          variant='contained'
-          className='submit-button'
-        >
-          Enviar
-        </Button>
-      </form>
-    </>
+        <img className="link-contact" src={gmail} alt="gmail" />
+      </a>
+      <a
+        className={`link-contact-container ${scrollContact ? 'appear-links' : ''}`}
+        href="https://walink.co/ab523e"
+        target="_blank"
+        rel="noopeneer">
+        <img className="link-contact" src={whatsapp} alt="whatsapp" />
+      </a>
+      <a
+        className={`link-contact-container ${scrollContact ? 'appear-links' : ''}`}
+        href="https://github.com/Nitsuga159"
+        target="_blank"
+        rel="noopeneer">
+        <img className="link-contact" src={github} alt="github" />
+      </a>
+    </footer>
   )
 }
