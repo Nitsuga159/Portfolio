@@ -20,7 +20,7 @@ export default function Block(
 
     const scrollDiv = (div.current as unknown as HTMLDivElement)?.offsetTop;
 
-    const pixels: number = window.innerWidth > 600 ? 700 : 400;
+    const pixels: number = window.innerWidth > 600 ? 700 : 300;
 
     if (scrollTop + pixels >= scrollDiv) {
       setShowText(true)
