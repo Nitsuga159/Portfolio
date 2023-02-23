@@ -163,11 +163,12 @@ export default function Projects() {
         <h3 className='projects-title' onClick={() => handleProjectsActive("htmlCssJavascript")}>
           HTML, CSS & JavaScript
         </h3>
-        <Container active={projectsActive.java} entries={java} />
+        <Container active={projectsActive.htmlCssJavascript} entries={js} />
         <h3 className='projects-title' onClick={() => handleProjectsActive("java")}>
           Java
         </h3>
-        <Container active={projectsActive.htmlCssJavascript} entries={js} />
+        <Container active={projectsActive.java} entries={java} />
+
         <h3 className='projects-title' onClick={() => handleProjectsActive("htmlCss")}>
           HTML & CSS
         </h3>
