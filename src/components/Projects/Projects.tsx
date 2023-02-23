@@ -83,6 +83,15 @@ const js = [
   },
 ];
 
+const java = [
+  {
+    title: "Ajedrez",
+    imgURL: require('../../images/screenshoot-chess.jpg'),
+    href: 'https://github.com/Nitsuga159/Chess-Java',
+    description: 'Ajedrez creado 100% en Java utilizando la POO (Programación Orientada a Objetos) implementando conceptos como el encapsulamiento, polimorfismo y sobrecarga de métodos. A su vez, realizando una interfaz gráfica con el paquete swing de Java, ya sea para crear una ventana, botón, ícono, añadir eventos, etc.'
+  }
+]
+
 const htmlAndCss = [
   {
     title: 'Documentación Técnica',
@@ -111,7 +120,7 @@ const htmlAndCss = [
   },
 ];
 
-type projects = "fullStack" | "react" | "htmlCssJavascript" | "htmlCss";
+type projects = "fullStack" | "react" | "htmlCssJavascript" | "java" | "htmlCss";
 
 export default function Projects() {
 
@@ -119,7 +128,8 @@ export default function Projects() {
     fullStack: false,
     react: false,
     htmlCssJavascript: false,
-    htmlCss: false
+    htmlCss: false,
+    java: false
   });
 
   const handleProjectsActive = useCallback((keyToActive: projects) => {
@@ -152,6 +162,10 @@ export default function Projects() {
         <Container active={projectsActive.react} entries={react} />
         <h3 className='projects-title' onClick={() => handleProjectsActive("htmlCssJavascript")}>
           HTML, CSS & JavaScript
+        </h3>
+        <Container active={projectsActive.java} entries={java} />
+        <h3 className='projects-title' onClick={() => handleProjectsActive("java")}>
+          Java
         </h3>
         <Container active={projectsActive.htmlCssJavascript} entries={js} />
         <h3 className='projects-title' onClick={() => handleProjectsActive("htmlCss")}>
